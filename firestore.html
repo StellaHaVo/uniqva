@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Firestore Example</title>
+    <script type="module" src="./firestore.js"></script>
+    <!-- Adjust the path if needed -->
+  </head>
+  <body>
+    <h2>Add Document</h2>
+    <form id="addForm">
+      <input type="text" id="addDocId" placeholder="Document ID" required />
+      <input
+        type="text"
+        id="addDocField"
+        placeholder="Document Field"
+        required
+      />
+      <button type="submit">Add Document</button>
+    </form>
+
+    <h2>Read Document</h2>
+    <form id="readForm">
+      <input type="text" id="readDocId" placeholder="Document ID" required />
+      <button type="submit">Read Document</button>
+    </form>
+
+    <h2>Subscribe to Real-Time Updates</h2>
+    <form id="subscribeForm">
+      <input
+        type="text"
+        id="subscribeDocId"
+        placeholder="Document ID"
+        required
+      />
+      <button type="submit">Subscribe</button>
+    </form>
+
+    <h2>List All Documents</h2>
+    <form id="listForm">
+      <input
+        type="text"
+        id="listCollectionName"
+        placeholder="Collection Name"
+        required
+      />
+      <button type="submit">List All Documents</button>
+    </form>
+
+    <script type="module">
+      import {
+        addDocument,
+        readDocument,
+        subscribeToDocument,
+        listAllDocuments,
+      } from "./firestore.js"; //functionss
+
+      // Handle adding document
+      document
+        .getElementById("addForm")
+        .addEventListener("submit", async (e) => {
+          e.preventDefault();
+          const docId = document.getElementById("addDocId").value;
+          const docField = document.getElementById("addDocField").value;
+
+          await addDocument("food", docId, { name: docField, price: 1000000, image: "https://facebook.com" });
+        });
+
+      // Handle reading document
+      document
+        .getElementById("readForm")
+        .addEventListener("submit", async (e) => {
+          e.preventDefault();
+          const docId = document.getElementById("readDocId").value;
+          await readDocument("food", docId);
+        });
+
+      // Handle subscribing to real-time updates
+      //Không cần để ý
+      document
+        .getElementById("subscribeForm")
+        .addEventListener("submit", (e) => {
+          e.preventDefault();
+          const docId = document.getElementById("subscribeDocId").value;
+          subscribeToDocument("food", docId);
+        });
+
+      // Handle listing all documents
+      document
+        .getElementById("listForm")
+        .addEventListener("submit", async (e) => {
+          e.preventDefault();
+          const collectionName =
+            document.getElementById("listCollectionName").value;
+          await listAllDocuments(collectionName);
+        });
+    </script>
+  </body>
+</html>

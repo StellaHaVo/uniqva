@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Post1</title>
+    <link rel="stylesheet" type="text/css" href="4post1.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Montserrat&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="post">
+        <div class="group product">
+            <img class="product-image" src="https://glints.com/vn/blog/wp-content/uploads/2022/09/Cac-nganh-cong-nghe-thong-tin-la-lua-chon-hang-dau-hien-nay-cua-goi-tre.jpg" alt="Image">
+            <div class="content">
+                <h1 class="name">Công nghệ thông tin</h1>
+                <p class="description">Một trong những ngành nghề sẽ trở thành xu hướng việc làm trong năm 2024 không thể không nhắc đến ngành Công nghệ thông tin. Không chỉ là ngành nghề hot trong tương lai mà từ lâu công nghệ thông tin luôn là sự lựa chọn được các bạn trẻ săn đón.
+
+                    Nhu cầu sử dụng internet trong cuộc sống ngày càng phổ biến, đặc biệt là các trang như Facebook, Google, Apple hay Tiktok, v.v đang phát triển mạnh mẽ. Điều này đòi hỏi những công ty hàng đầu phải tìm kiếm những được kỹ sư am hiểu công nghệ thông tin để có thể tiếp nối và phát triển hơn nữa.
+                    
+                    Hiện nay các công ty tập đoàn lớn tại Việt Nam như: FPT, Viettel hay Vingroup luôn có các đợt tuyển dụng nhân viên công nghệ thông tin với số lượng lớn, qua đây có thể thấy nhu cầu về ngành nghề này là vô kể.
+                    
+                    Công nghệ thông tin là một ngành nghề rất rộng bao gồm thương mại điện tử, lập trình cho đến Marketing online hay Media. Do đó, điều đầu tiên là bạn phải xác định được bản thân thích ngành nào để có động lực theo đuổi tới cùng.</p>
+            </div>
+        </div>
+        
+        <div class="commentplace">
+            <form id="commentForm">
+                <fieldset>
+                    <label for="userName">Tên đăng nhập:</label>
+                    <input id="userName" type="text" name="userName" placeholder="Nhập tên của bạn" required>
+
+                    <label for="userComment">Bình luận:</label>
+                    <textarea id="userComment" rows="4" cols="50" name="userComment" placeholder="Nhập bình luận của bạn" required></textarea>
+
+                    <input type="button" onclick="submitComment()" value="Gửi bình luận">
+                </fieldset>
+            </form>
+
+            <div class="display">
+                <h5>Bình luận đã gửi:</h5>
+                <div id="commentSection" class="displaycomments"></div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function submitComment() {
+            const name = document.getElementById("userName").value;
+            const comment = document.getElementById("userComment").value;
+
+            if (name && comment) {
+                const commentSection = document.getElementById("commentSection");
+                const newComment = document.createElement("p");
+                newComment.innerHTML = `<strong>${name}:</strong> ${comment}`;
+                commentSection.appendChild(newComment);
+
+                document.getElementById("commentForm").reset();
+            } else {
+                alert("Vui lòng nhập đầy đủ thông tin.");
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Product List</title>
+    <style>
+      .product-list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+      }
+
+      .product-item {
+        border: 1px solid #ddd;
+        padding: 10px;
+        margin: 10px;
+        width: 200px;
+        cursor: pointer;
+        text-align: center;
+      }
+
+      .product-item img {
+        width: 100%;
+      }
+
+      .product-detail {
+        display: none;
+        margin-top: 20px;
+        border: 1px solid #ddd;
+        padding: 20px;
+      }
+
+      .product-detail img {
+        width: 100%;
+        margin-bottom: 20px;
+      }
+
+      .back-button {
+        display: inline-block;
+        margin-top: 20px;
+        padding: 10px 20px;
+        background-color: #007bff;
+        color: white;
+        border: none;
+        cursor: pointer;
+      }
+
+      .back-button:hover {
+        background-color: #0056b3;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Product List</h1>
+    <div class="product-list" id="productList">
+       <!-- Danh sách các món ăn có trong cơ sở dữ liệu -->
+      <!-- Tìm ra phần tử chứa toàn bộ danh sách muốn hiển thị, ở đây là thẻ div có id="productList" -->
+    </div>
+
+
+
+    <!-- Product detail view -->
+     <!-- Để tạo ra chức năng xem chi tiết sản phẩm / ..., việc đầu tiên phải tạo ra format html của màn hình chi tiết -->
+    <div class="product-detail" id="productDetail">
+      <h2 class="product-detail-name" id="productDetailName">
+        <!--textContent-->
+      </h2>
+      <img class="product-detail-image" id="productDetailImage" alt="" />
+      <p class="product-detail-price" id="productDetailPrice">
+        <!--textContent-->
+      </p>
+      <p class="product-detail-description" id="productDetailDescription">
+          <!--textContent-->
+      </p>
+      <button class="back-button" id="backButton">Back to list</button>
+    </div>
+
+    <script src="firestore.js" type="module"></script>
+    <script src="list.js" type="module"></script>
+  </body>
+</html>

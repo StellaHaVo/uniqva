@@ -1,0 +1,156 @@
+body {
+    margin: 0px;
+    background-image: url(https://ugc.futurelearn.com/uploads/images/7a/1a/7a1aec47-8310-4f1a-887c-3afa46c72495.jpg);
+    
+}
+header {
+    border: solid 10px #071540;
+    background-color: #030526;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    padding: 10px;
+    font-family: playfair display;
+}
+
+.side-des {
+    font-family: playfair display;
+    font-style: italic;
+    font-size: 20px;
+    padding: 3px 150px
+
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.circle { 
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    background: #d98bb6;
+
+    position: inherit;
+    left: 19px;
+    top: 19px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 60px;
+    color: white;
+}
+
+.section {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.post { 
+    display:flex;
+    margin-top: 30px;
+    margin-right: 10px;
+
+}
+
+.post-part {
+    margin: 5px;
+    width: 500px;
+    height: auto;
+    padding: 0px 15px;
+    background-color: white;
+    text-decoration: none;
+}
+
+.text {
+    display:flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin: 0px;
+    font-family: 'Roboto', sans-serif;
+    padding: 15px 10px;
+    width:auto
+}
+
+.name {
+    text-align: left;
+    color:#000000;
+    font-weight: bold;
+    font-size: 25px;
+    margin-top: 18px;
+}
+
+
+.navbar {
+  background-color: #f4f4f4;
+  padding: 0px;
+  margin:0px;
+  list-style-type: none;
+  box-sizing: border-box;
+  width: 100%;
+
+}
+
+
+.active {
+    background-color: #8c3545;
+    color:#ffff;
+    width: 100%
+}
+
+.navbar li {
+  display: inline-block;
+  width:150px;
+  padding: 5px 10px;
+  text-align: center;
+}
+
+ul {
+    background-color: #8149a6;
+    padding-left:0px
+}
+
+.navbar a {
+  color: #f4f4f4;
+  font-weight: bold;
+  font-size: 30px;
+  text-decoration: none;
+}
+
+.navbar a:hover {
+  color: #dd7d7d; /* Change color on hover */
+  background-color: #333;
+}
+
+.item {
+    font-size: 40px;
+
+}
+
+
+
+footer {
+    margin-top: 60px;
+    background-color: #030526;
+    color: #f5f5f5;
+    text-align: center;
+    padding: 5px 15px;
+    font-size: 25px;
+    bottom: 0;
+    width: 98.5%;
+}
+
+footer a {
+    color: #d98bb6;
+    text-decoration: none;
+}
+
+
