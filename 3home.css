@@ -1,7 +1,10 @@
 body {
     margin: 0px;
     background-image: url(https://ugc.futurelearn.com/uploads/images/7a/1a/7a1aec47-8310-4f1a-887c-3afa46c72495.jpg);
-    
+    background: #4568DC;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #B06AB3, #4568DC);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #B06AB3, #4568DC); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
 }
 header {
     border: solid 10px #071540;
